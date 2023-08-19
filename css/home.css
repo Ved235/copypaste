@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,300&family=Poppins:wght@300&family=Ubuntu&display=swap');
+@font-face {
+  font-family: Sailec;
+  src: url(/SailecBold.ttf);
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  margin: 0rem;
+  overflow: hidden;
+  margin: 0;
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center;
+
+
+}
+/* Colors */
+body{
+  overflow: hidden;
+}
+  .parallax {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  
+  .slide-1 {
+    left: 0;
+  }
+  
+  .slide-2 {
+    left: 100%;
+  }
+  
+  .slide-3 {
+    left: 200%;
+  }
+  .slide-4 {
+    left: 300%;
+  }
+  .slide-5 {
+    left: 400%;
+  }
+
+  
+  .structure-screen {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #854EFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .solstice-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFBA00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .huarache-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4054FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    /* Pagination */
+  .parallax-pagination {
+    z-index: 1000;
+    position: absolute;
+    left: calc(50vw - 120px);
+    bottom: 30px;
+    display: flex;
+  
+  }
+  .parallax-pagination label {
+    display: inline-block;
+    margin: 0 8px;
+    width: 20px;
+    height: 3px;
+    background-color: #FFF;
+    border-radius: 25%;
+    cursor: pointer;
+  }
+  
+  .slide-radio1:checked ~ .parallax-pagination .page1,
+  .slide-radio2:checked ~ .parallax-pagination .page2,
+  .slide-radio3:checked ~ .parallax-pagination .page3,
+  .slide-radio4:checked ~ .parallax-pagination .page4,
+  .slide-radio5:checked ~ .parallax-pagination .page5{
+    width: 20px;
+    height: 3px;
+    border: 1px solid #ea2e49;
+    background: transparent;
+  }
+  
+  /* Slider Slide Effect */
+  .slide-radio1:checked ~ .slider {
+    transform: translateX(0%);
+  }
+
+  .slide-radio2:checked ~ .slider {
+    transform: translateX(-100%);
+  }
+
+  
+  .slide-radio3:checked ~ .slider {
+    transform: translateX(-200%);
+  }
+  .slide-radio4:checked ~ .slider {
+    transform: translateX(-300%);
+  }
+  .slide-radio5:checked ~ .slider {
+    transform: translateX(-400%);
+  }
+
+
+  /* Slider */
+  .slider {
+    top: 0;
+    transition: transform 1500ms ease-in-out;
+    transform: scale(1);
+  }
+
+  .move{
+    width: 30rem;
+    height: 25rem;
+    left: 10vw;
+    top: 15vh;
+    position: absolute;
+    rotate:-40deg;
+
+  }
+  .move2{
+    width: 30rem;
+    height: 25rem;
+    left: 60vw;
+    top: 45vh;
+    rotate: -10deg;
+    position: absolute;
+    z-index: 11;
+  }
+  #text1{
+    position: absolute;
+    font-family: Sailec;
+    font-size: 10rem;
+    color:white;
+    z-index: 10;
+  }

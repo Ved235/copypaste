@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <title>Nikola Tesla</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+        </div>
+        <div class="menu">
+            <i class="fa-sharp fa-solid fa-bars fa-2xl" id="bars" onclick="menu_pressed()"></i>
+            <i class="fa-solid fa-xmark fa-2xl" id="cross" onclick="menu_pressed()"></i>
+            
+        </div>
+        <div id="circle_zoom"></div>
+        <div class="navbar" id="navbar">
+            <div id="nav_cont">
+
+                <div id="up3">
+                    <div id="nav_image"></div>
+                </div>
+                
+                <div id="up2">
+                    <ul id="nav_elements1" >
+                        <li onmouseenter="hover('tesla')"><a href="index.html" class="nav_link" style="color:white;">Home</a></li>
+                        <li onmouseenter="hover('tesla')"><a href="" class="nav_link">About Tesla</a></li>
+                        <li onmouseenter="hover('tesla')"><a href="Timeline.html" class="nav_link">Timeline</a></li>
+                        <li onmouseenter="hover('us')"><a href="" class="nav_link">Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <div id="up1">
+                    <ul id="nav_elements">
+                        <li onmouseenter="hover('tesla_coil')"><a href="/inventions/teslacoil.html" class="nav_link"  id="tesla_coil">Tesla Coil</a></li>
+                        <li onmouseenter="hover('tesla_turbine')"><a href="/inventions/teslaturbine.html" class="nav_link"  id="tesla_turbine">Tesla Turbine</a></li>
+                        <li onmouseenter="hover('world_of_ac')"><a href="/inventions/acpower.html" class="nav_link"  id="world_of_ac">The World of AC power</a></li>
+                        <li onmouseenter="hover('induction_motor')"><a href="/inventions/inductionmotor.html" class="nav_link"  id="induction_motor">Induction Motor</a></li>
+                        <li onmouseenter="hover('tesla_valve')"><a href="/inventions/teslavalve.html" class="nav_link"  id="tesla_valve">Tesla Valve</a></li>
+                    </ul>
+                </div>
+                
+            </div> 
+        </div>
+    </header>
+    <div id="index" style="height: 100vh;width: 100vw;">
+        
+        
+        <!----------------------------------------------------------------------------------------->
+        <div class="parallax">
+            <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+            <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+            <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+            <input type="radio" name="slider" class="slide-radio4" id="slider_4">
+            <input type="radio" name="slider" class="slide-radio5" id="slider_5">
+       
+            
+            <div class="parallax-pagination">
+              <label for="slider_1" class="page1"></label>
+              <label for="slider_2" class="page2"></label>
+              <label for="slider_3" class="page3"></label>
+              <label for="slider_4" class="page4"></label>
+              <label for="slider_5" class="page5"></label>
+    
+            </div>
+            
+       
+            <div class="structure-screen slider slide-1">
+                <img src="images/noshadow.png" alt="" class="move">
+                <img src="images/noshadow.png" alt="" class="move2">
+                <div id="text1">Tesla Coil</div>
+            </div>
+          
+       
+            <div class="solstice-screen slider slide-2">
+                <img src="images/noshadow.png" alt="" class="move">
+                <img src="images/noshadow.png" alt="" class="move2">
+                <div id="text1">Tesla Turbine</div>
+            </div>
+    
+            <div class="huarache-screen slider slide-3">
+                <img src="images/noshadow.png" alt="" class="move">
+                <img src="images/noshadow.png" alt="" class="move2">
+                <div id="text1">AC Power</div>
+          </div>
+          <div class="structure-screen slider slide-4">
+            <img src="images/noshadow.png" alt="" class="move">
+            <img src="images/noshadow.png" alt="" class="move2">
+            <div id="text1">Induction Motor</div>
+        </div>
+      
+   
+        <div class="solstice-screen slider slide-5">
+            <img src="images/noshadow.png" alt="" class="move">
+            <img src="images/noshadow.png" alt="" class="move2">
+            <div id="text1">Tesla Valve</div>
+        </div>
+
+          
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        </div>
+    
+</body>
+<script src="header.js"></script>
+<script>
+$(document).ready(function($){
+    $("#index").mousemove(function(e){
+        var mouseX = e.pageX;
+        var mouseY = e.pageY;
+        var offX = -mouseX / $('#index').width();
+        var offY = -mouseY / $('#index').height();
+        
+        $(".move").each(function(index, element) {
+            var translateX = offX *  3; // Adjust the factor as needed
+            var translateY = offY *  5; // Adjust the factor as needed
+            
+            element.style.transform = "translate(" + translateX + "%, " + translateY + "%)";
+        });
+        $(".move2").each(function(index, element) {
+            var translateX = offX *  5; // Adjust the factor as needed
+            var translateY = offY * 10; // Adjust the factor as needed
+            
+            element.style.transform = "translate(" + translateX + "%, " + translateY + "%)";
+        });
+    });
+});
+
+</script>
+
+</html>
