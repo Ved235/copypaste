@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Sailec;
+    src: url(/SailecMedium.ttf);
+  }
+body{
+    margin: 0;
+    overflow: hidden;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.backdrop{
+    background-color: #e7524c;
+    position: absolute;
+    width: 40rem;
+    height: 50rem;
+    left: calc(100vw - 50rem);
+   
+}
+.text{
+    font-family: Sailec;
+    color: white;
+    position: absolute;
+    width: 30rem;
+    left: 10%;
+  
+}
+.heading{
+    font-size: 36px;
+    top: calc(50vh - 10rem);
+   
+}
+.para{
+    top: calc(50vh - 5rem);
+    font-size: 18px;
+}
